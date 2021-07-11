@@ -9,7 +9,7 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-      tname:
+      modelname:
         description: 'model name'
         required: true
         default: 'HC5962'
@@ -55,7 +55,7 @@ jobs:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
     - name: Build Firmware
       env:
-        TNAME: ${{ github.event.inputs.tname }}
+        TNAME: ${{ github.event.inputs.modelname }}
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
