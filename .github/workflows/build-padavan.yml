@@ -12,7 +12,7 @@ on:
       modelname:
         description: 'model name'
         required: true
-        default: 'HC5962'
+        default: 'NEWIFI-MINI'
   release:
     types: [published]
   push:
