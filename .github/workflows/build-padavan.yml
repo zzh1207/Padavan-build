@@ -55,7 +55,7 @@ jobs:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
     - name: Build Firmware
       env:
-        TNAME: ${{ github.event.inputs.modelname }}
+        TNAME: NEWIFI-MINI
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
